@@ -8,7 +8,7 @@ import { flatten } from 'lodash';
 const getAmplifierInput = async (amplifier: Intcode): Promise<number> => {
     return new Promise(async (resolve) => {
         amplifier.readline.on('line', data => resolve(parseInt(data)));
-        await amplifier.executeCommand(0);
+        amplifier.executeCommand(0);
     })
 }
 
